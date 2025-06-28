@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brewed with Love | Artisan Coffee</title>
+  <style>
+    :root {
+      --primary: #6F4E37; /* Coffee brown */
+      --secondary: #C4A484; /* Latte color */
+      --accent: #E3B04B; /* Golden accent */
+      --light: #F5F2EC;
+      --dark: #2E2B28;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+    
+    header, section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+                  url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: var(--accent);
+      bottom: -10px;
+      left: 25%;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .card-content {
+      padding: 1.5rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+    
+    .btn:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    
+    .social-links {
+      margin: 1rem 0;
+    }
+    
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: var(--accent);
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      .hero {
+        height: 80vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Brewed with Love</h1>
+    <p style="font-size: 1.5rem; max-width: 800px; margin: 1rem auto;">Artisan coffee crafted with passion and served with warmth</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>Our Story</h2>
+    <p style="max-width: 800px; margin: 0 auto 2rem;">Founded in 2015, we've been serving the perfect cup with ethically sourced beans and a commitment to quality.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551030173-122aabc4489e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Barista crafting coffee">
+        <div class="card-content">
+          <h3>Master Baristas</h3>
+          <p>Our team of certified baristas brings years of experience to every cup.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Coffee farm">
+        <div class="card-content">
+          <h3>Ethically Sourced</h3>
+          <p>We work directly with farmers to ensure fair trade and sustainable practices.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Coffee beans">
+        <div class="card-content">
+          <h3>Premium Quality</h3>
+          <p>Only the finest specialty grade beans make it into our brews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" style="background: #f9f6f0;">
+    <h2>Our Menu</h2>
+    <p style="max-width: 800px; margin: 0 auto 2rem;">Discover our handcrafted beverages and fresh bakery items</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Espresso">
+        <div class="card-content">
+          <h3>Espresso</h3>
+          <p>Rich and intense, the heart of all our coffee drinks</p>
+          <span>$3.50</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Latte">
+        <div class="card-content">
+          <h3>Latte</h3>
+          <p>Smooth espresso with steamed milk and light foam</p>
+          <span>$4.50</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Cappuccino">
+        <div class="card-content">
+          <h3>Cappuccino</h3>
+          <p>Equal parts espresso, steamed milk, and foam</p>
+          <span>$4.50</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Cold Brew">
+        <div class="card-content">
+          <h3>Cold Brew</h3>
+          <p>Smooth 18-hour steeped cold coffee</p>
+          <span>$4.00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Our Space</h2>
+    <p style="max-width: 800px; margin: 0 auto 2rem;">A welcoming environment designed for comfort and connection</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Café interior">
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Coffee bar">
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Outdoor seating">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: var(--primary); color: white;">
+    <h2 style="color: white;">Visit Us</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <p>123 Brew Lane, Coffee City, CA 90210</p>
+      <p>Open daily from 7am to 7pm</p>
+      <p>Email: hello@brewedwithlove.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Brewed with Love. All rights reserved.</p>
+    <p>Designed with ❤️ for coffee lovers</p>
+  </footer>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
